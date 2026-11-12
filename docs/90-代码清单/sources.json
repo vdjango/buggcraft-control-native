@@ -1,0 +1,134 @@
+[
+  {
+    "path": "include/control/browser.hpp",
+    "sha256": "45a93598406505b22974c990269feba748aae0f3e9d30fa9aa7472691f31ec05"
+  },
+  {
+    "path": "include/control/config.hpp",
+    "sha256": "6e1cb5971c6c285a764078d100592da15c1138f0bb44f3dd46a3365c0b97e308"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "sha256": "bb6ebb37a043a09ce805083ec8b2233f3a524272136032a87991fe7cd1034e31"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "sha256": "69193cc14b1edd2c88fd8f5d0e1682a78cc14f46a1c8137b239e69e3c9ac784f"
+  },
+  {
+    "path": "include/control/server.hpp",
+    "sha256": "11865567829c945699163f9034ee1ffd9984f3e4a2d64170a0f1461f76a55026"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "sha256": "d21341b14b02eca2eb11b3ffba0adc414fe1af3386d651149672d8fcc1d74dc9"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "sha256": "7cb3b00f553f6318d61c3f190795eec9dea91d27316d97b1bad7a1d173e62189"
+  },
+  {
+    "path": "src/activity.cpp",
+    "sha256": "f2ab7ca2436c4453357e280dd9768374c41e4805d493a2ef772103dc2a9e1ebd"
+  },
+  {
+    "path": "src/browser.cpp",
+    "sha256": "3b6a3f9cde590e3d5599fbb5e17aa94c1389863b734dcd62c53a6b14f394a45d"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "sha256": "7b448a16fac23cc9ab10b5ae23b5711d9c3f2b1e447c9c3f00e9f28c90b601ea"
+  },
+  {
+    "path": "src/config.cpp",
+    "sha256": "ca6a43c3672fcd677ac1e2bb70666d03e89b40b3ff1d3cd6a2f1fa8392c14df7"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "sha256": "5c54f0b6ba60bee7193a2e4d2d9a1f045688e2bb289cd5651242efeb42fe1426"
+  },
+  {
+    "path": "src/database.cpp",
+    "sha256": "730133b8dd9c34c2fa50c87467109abc65d7aadf975a0251a3f8585b92fde0ca"
+  },
+  {
+    "path": "src/enrollment.cpp",
+    "sha256": "a1d3f2c001972e0a049cd8cf3eea1a937a2a618851ab08eb58aa0c7f5ae6f1b1"
+  },
+  {
+    "path": "src/json.cpp",
+    "sha256": "0c8680aedf60a409608dcd211ecbbc2691904f7ea69054edd865a1da4e29f004"
+  },
+  {
+    "path": "src/main.cpp",
+    "sha256": "0328100b14797d49fe7ad6517e842b428fe255ebe80d66bbc7b2aadaaca95320"
+  },
+  {
+    "path": "src/placement.cpp",
+    "sha256": "425121bfd2bfeb34ec873967f2395b30beac32328e0b70cbce68ffe3428f05ca"
+  },
+  {
+    "path": "src/probe.cpp",
+    "sha256": "48cd9b2694625e64fc8c6f5b7ffd645080de1f690c211943e91d1fccf17db166"
+  },
+  {
+    "path": "src/server.cpp",
+    "sha256": "01ac21a113e6a187f707e5e6cd926cc4d71690f434be5b5e1ef41c7fa3400b05"
+  },
+  {
+    "path": "src/service.cpp",
+    "sha256": "2c51c398ceaad65b93d287ae8d681b4dad2482789e4938f605e65919e1372c7e"
+  },
+  {
+    "path": "src/social.cpp",
+    "sha256": "a9225569ccc7d66d9ef9029c9748b9d657cbd83975b4f9256d19cbc4311cfe1c"
+  },
+  {
+    "path": "src/social_import.cpp",
+    "sha256": "5e15da1e28b0762c8dd611c5fb8a47a40797569c3cd26f0f50f5ecb2045181f6"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "sha256": "17f1d7572a349b5d52a40612a5b53be750f53322aa374e0fa5605b5ccadb165c"
+  },
+  {
+    "path": "tests/integration.py",
+    "sha256": "15265ab1edbc2ecde18bf86289af57e9f45a9ff21d39c3dc574fc753acf0bf41"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "sha256": "4d54161f7d1b19fe984ccd3a923eb03ef440cb2ffcbfdf541e18a732976ee78d"
+  },
+  {
+    "path": "tests/units.cpp",
+    "sha256": "05b53c31fde652784427bdc47fae9c169aa737bd4eb4763e018050fa50d72fde"
+  },
+  {
+    "path": "benchmarks/json.cpp",
+    "sha256": "64e669a23811387fc5e55192112af7d2ea043a13fae4dcd0c5aec025329d5c26"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "sha256": "ec26062765dcd85d210c8619fda8271b72023ca68efa348d6f0fcb10752a3e8f"
+  },
+  {
+    "path": "scripts/admin.py",
+    "sha256": "49f4c4cd2ac96bd21b2ed3dcce855deda7d051ec0ed508eb7212f5274aa83b29"
+  },
+  {
+    "path": "scripts/check_docs.py",
+    "sha256": "ef8ee43b97cc1e915ed9331f25a05c1b363ab07141485c89c7e1bd40bcc2f2f1"
+  },
+  {
+    "path": "scripts/export_identity.py",
+    "sha256": "2f34f40a662b6074ec28723518f665e2d8b665fba23536588e89bb8bd14b81db"
+  },
+  {
+    "path": "scripts/inventory.py",
+    "sha256": "48040acb88a432db6a38865f9d4ea4ac334c6072652dbdba18105b789fa8394d"
+  },
+  {
+    "path": "scripts/limited_build.py",
+    "sha256": "e1140b2f654ac855b52228eddeac062357368c1c71569f3ac016550e9c364eaa"
+  }
+]

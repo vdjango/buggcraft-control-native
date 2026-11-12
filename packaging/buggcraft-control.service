@@ -1,0 +1,26 @@
+[Unit]
+Description=Buggcraft independent multiplayer control service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=buggcraft-control
+Group=buggcraft-control
+ExecStart=/opt/buggcraft-control/bin/buggcraft-control --config /etc/buggcraft-control/config.json
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=20
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryHigh=192M
+MemoryMax=256M
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

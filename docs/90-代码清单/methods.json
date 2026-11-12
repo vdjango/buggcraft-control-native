@@ -1,0 +1,3368 @@
+[
+  {
+    "path": "benchmarks/json.cpp",
+    "line": 6,
+    "kind": "function_declarator",
+    "name": "main(int argc, char **argv)"
+  },
+  {
+    "path": "benchmarks/json.cpp",
+    "line": 6,
+    "kind": "function_definition",
+    "name": "int main(int argc, char **argv) {"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "line": 22,
+    "kind": "FunctionDef",
+    "name": "fixture_sql"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "line": 40,
+    "kind": "FunctionDef",
+    "name": "proc_usage"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "line": 48,
+    "kind": "FunctionDef",
+    "name": "database_cpu"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "line": 62,
+    "kind": "FunctionDef",
+    "name": "measure"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "line": 64,
+    "kind": "FunctionDef",
+    "name": "worker"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "line": 111,
+    "kind": "Lambda",
+    "name": "<lambda>"
+  },
+  {
+    "path": "benchmarks/system.py",
+    "line": 121,
+    "kind": "FunctionDef",
+    "name": "main"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 7,
+    "kind": "struct_specifier",
+    "name": "struct BrowserRequest {"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 11,
+    "kind": "struct_specifier",
+    "name": "struct BrowserReply {"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 14,
+    "kind": "function_declarator",
+    "name": "BrowserReply()"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 14,
+    "kind": "function_definition",
+    "name": "BrowserReply() = default;"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 15,
+    "kind": "function_declarator",
+    "name": "BrowserReply(int code, std::string payload)"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 15,
+    "kind": "function_definition",
+    "name": "BrowserReply(int code, std::string payload) : status(code), body(std::move(payload)) {}"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 17,
+    "kind": "struct_specifier",
+    "name": "struct BrowserConfig {"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 24,
+    "kind": "function_declarator",
+    "name": "load(const Json &, const std::string &base)"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 26,
+    "kind": "function_declarator",
+    "name": "base64url(std::string_view)"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 27,
+    "kind": "function_declarator",
+    "name": "decode_base64(std::string)"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 28,
+    "kind": "function_declarator",
+    "name": "ssh_signature(const std::string &signature_hex)"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 29,
+    "kind": "function_declarator",
+    "name": "ssh_public_key(const std::string &key_hex)"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 30,
+    "kind": "function_declarator",
+    "name": "hmac_sha256(std::string_view key, std::string_view message)"
+  },
+  {
+    "path": "include/control/browser.hpp",
+    "line": 32,
+    "kind": "function_declarator",
+    "name": "send_browser_mail(const Json &settings, const std::string &mailbox, const std::string &code)"
+  },
+  {
+    "path": "include/control/config.hpp",
+    "line": 7,
+    "kind": "struct_specifier",
+    "name": "struct Config {"
+  },
+  {
+    "path": "include/control/config.hpp",
+    "line": 24,
+    "kind": "function_declarator",
+    "name": "load(const std::string &path)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 7,
+    "kind": "function_declarator",
+    "name": "hex(std::string_view bytes)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 8,
+    "kind": "function_declarator",
+    "name": "unhex(std::string_view input)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 9,
+    "kind": "function_declarator",
+    "name": "sha256(std::string_view input)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 10,
+    "kind": "function_declarator",
+    "name": "random_id()"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 11,
+    "kind": "function_declarator",
+    "name": "secure_equal(std::string_view a, std::string_view b)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 12,
+    "kind": "function_declarator",
+    "name": "decode_base64(std::string input)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 13,
+    "kind": "function_declarator",
+    "name": "verify_ed25519(std::string_view public_key_hex, std::string_view message,"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 15,
+    "kind": "function_declarator",
+    "name": "verify_account_proof(std::string_view public_key, std::string_view message, std::string_view signature)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 17,
+    "kind": "function_declarator",
+    "name": "legacy_identity(const Json &certificate,"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 19,
+    "kind": "struct_specifier",
+    "name": "struct Delegation {"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 23,
+    "kind": "function_declarator",
+    "name": "verify_delegation(const Json &body, bool require_current = true)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 24,
+    "kind": "class_specifier",
+    "name": "class Signer {"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 28,
+    "kind": "function_declarator",
+    "name": "Signer(const std::string &pem_file)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 29,
+    "kind": "function_declarator",
+    "name": "Signer(std::shared_ptr<EVP_PKEY> key)"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 30,
+    "kind": "function_declarator",
+    "name": "public_key() const"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 31,
+    "kind": "function_declarator",
+    "name": "sign(std::string_view message) const"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 32,
+    "kind": "function_declarator",
+    "name": "token(const Json &claims) const"
+  },
+  {
+    "path": "include/control/crypto.hpp",
+    "line": 33,
+    "kind": "function_declarator",
+    "name": "verify(std::string_view token, std::string_view audience) const"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 9,
+    "kind": "class_specifier",
+    "name": "class Rows {"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 13,
+    "kind": "function_declarator",
+    "name": "Rows(PGresult *result)"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 14,
+    "kind": "function_declarator",
+    "name": "size() const"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 15,
+    "kind": "function_declarator",
+    "name": "at(int row, int col) const"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 16,
+    "kind": "function_declarator",
+    "name": "json(int row, int col = 0) const"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 17,
+    "kind": "function_declarator",
+    "name": "number(int row, int col = 0) const"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 20,
+    "kind": "class_specifier",
+    "name": "class Database {"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 25,
+    "kind": "function_declarator",
+    "name": "Database(const std::string &conninfo)"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 26,
+    "kind": "function_declarator",
+    "name": "query(std::string_view sql, const Params &params = Params())"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 27,
+    "kind": "function_declarator",
+    "name": "lock(std::string key)"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 28,
+    "kind": "function_declarator",
+    "name": "migrate(const std::string &sql)"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 30,
+    "kind": "class_specifier",
+    "name": "class Transaction {"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 35,
+    "kind": "function_declarator",
+    "name": "Transaction(Database &db)"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 36,
+    "kind": "function_declarator",
+    "name": "~Transaction()"
+  },
+  {
+    "path": "include/control/database.hpp",
+    "line": 37,
+    "kind": "function_declarator",
+    "name": "commit()"
+  },
+  {
+    "path": "include/control/server.hpp",
+    "line": 4,
+    "kind": "function_declarator",
+    "name": "run_server(const Config &config)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 8,
+    "kind": "struct_specifier",
+    "name": "struct Actor {"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 12,
+    "kind": "struct_specifier",
+    "name": "struct Reply {"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 16,
+    "kind": "function_declarator",
+    "name": "probe_node(const std::string &endpoint, const std::string &proof_endpoint, const std::string &public_key,"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 18,
+    "kind": "class_specifier",
+    "name": "class Service {"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 19,
+    "kind": "function_declarator",
+    "name": "record_activity(Database &, const std::string &account, const std::string &kind, int lease)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 20,
+    "kind": "function_declarator",
+    "name": "record_companions(Database &, const std::string &account, const std::string &room,"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 22,
+    "kind": "function_declarator",
+    "name": "activity(Database &, const std::string &account)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 29,
+    "kind": "function_declarator",
+    "name": "authenticate(Database &, std::string_view token)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 30,
+    "kind": "function_declarator",
+    "name": "enrollment(Database &, const std::string &, const Json &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 31,
+    "kind": "function_declarator",
+    "name": "node(Database &, const std::string &, const Json &, const Actor &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 32,
+    "kind": "function_declarator",
+    "name": "placement(Database &, const std::string &, const Json &, const Actor &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 33,
+    "kind": "function_declarator",
+    "name": "presence(Database &, const std::string &, const Json &, const Actor &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 34,
+    "kind": "function_declarator",
+    "name": "social(Database &, const std::string &, const Json &, const Actor &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 35,
+    "kind": "function_declarator",
+    "name": "admin(Database &, const std::string &, const Json &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 36,
+    "kind": "function_declarator",
+    "name": "actor_kind(const Actor &, std::string_view kind) const"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 37,
+    "kind": "function_declarator",
+    "name": "idempotency_lock(Database &, std::string_view actor, std::string_view key) const"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 38,
+    "kind": "function_declarator",
+    "name": "grant(const Actor &) const"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 39,
+    "kind": "function_declarator",
+    "name": "browser_api(Database &, const BrowserRequest &, const std::string &path,"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 43,
+    "kind": "function_declarator",
+    "name": "Service(Config config)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 44,
+    "kind": "function_declarator",
+    "name": "dispatch(Database &, const std::string &path, std::string_view bearer, const Json &body)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 45,
+    "kind": "function_declarator",
+    "name": "browser(Database &, const BrowserRequest &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 46,
+    "kind": "function_declarator",
+    "name": "import_browser(Database &, const Json &snapshot)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 47,
+    "kind": "function_declarator",
+    "name": "import_social(Database &, const Json &events)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 48,
+    "kind": "function_declarator",
+    "name": "maintain(Database &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 49,
+    "kind": "function_declarator",
+    "name": "config() const"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 49,
+    "kind": "function_definition",
+    "name": "const Config &config() const {"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 52,
+    "kind": "function_declarator",
+    "name": "signer() const"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 52,
+    "kind": "function_definition",
+    "name": "const Signer &signer() const {"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 10,
+    "kind": "struct_specifier",
+    "name": "struct Error : std::runtime_error {"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 13,
+    "kind": "function_declarator",
+    "name": "Error(int status_, std::string code_, std::string message)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 13,
+    "kind": "function_definition",
+    "name": "Error(int status_, std::string code_, std::string message)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 16,
+    "kind": "function_declarator",
+    "name": "require(bool condition, std::string_view code, std::string_view message, int status = 400)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 17,
+    "kind": "function_declarator",
+    "name": "parse_json(std::string_view input, std::size_t limit = 65536)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 18,
+    "kind": "function_declarator",
+    "name": "select_json_backend(std::string_view name)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 19,
+    "kind": "function_declarator",
+    "name": "json_backend()"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 20,
+    "kind": "function_declarator",
+    "name": "text(const Json &value, std::string_view key, std::size_t max = 256)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 21,
+    "kind": "function_declarator",
+    "name": "integer(const Json &value, std::string_view key, std::int64_t low, std::int64_t high)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 22,
+    "kind": "function_declarator",
+    "name": "read_file(const std::string &path, std::size_t max = 1048576)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 23,
+    "kind": "function_declarator",
+    "name": "read_secret(const std::string &path, std::size_t max = 16384)"
+  },
+  {
+    "path": "include/control/types.hpp",
+    "line": 24,
+    "kind": "function_declarator",
+    "name": "unix_seconds()"
+  },
+  {
+    "path": "scripts/admin.py",
+    "line": 9,
+    "kind": "FunctionDef",
+    "name": "main"
+  },
+  {
+    "path": "scripts/check_docs.py",
+    "line": 9,
+    "kind": "FunctionDef",
+    "name": "main"
+  },
+  {
+    "path": "scripts/export_identity.py",
+    "line": 15,
+    "kind": "FunctionDef",
+    "name": "read"
+  },
+  {
+    "path": "scripts/export_identity.py",
+    "line": 19,
+    "kind": "FunctionDef",
+    "name": "write_new"
+  },
+  {
+    "path": "scripts/export_identity.py",
+    "line": 25,
+    "kind": "FunctionDef",
+    "name": "export"
+  },
+  {
+    "path": "scripts/export_identity.py",
+    "line": 64,
+    "kind": "FunctionDef",
+    "name": "main"
+  },
+  {
+    "path": "scripts/inventory.py",
+    "line": 11,
+    "kind": "FunctionDef",
+    "name": "generate"
+  },
+  {
+    "path": "scripts/inventory.py",
+    "line": 42,
+    "kind": "Lambda",
+    "name": "<lambda>"
+  },
+  {
+    "path": "scripts/inventory.py",
+    "line": 47,
+    "kind": "FunctionDef",
+    "name": "main"
+  },
+  {
+    "path": "scripts/limited_build.py",
+    "line": 10,
+    "kind": "FunctionDef",
+    "name": "stop_group"
+  },
+  {
+    "path": "scripts/limited_build.py",
+    "line": 28,
+    "kind": "FunctionDef",
+    "name": "main"
+  },
+  {
+    "path": "scripts/limited_build.py",
+    "line": 45,
+    "kind": "FunctionDef",
+    "name": "limit_child"
+  },
+  {
+    "path": "scripts/limited_build.py",
+    "line": 53,
+    "kind": "FunctionDef",
+    "name": "terminate"
+  },
+  {
+    "path": "src/activity.cpp",
+    "line": 5,
+    "kind": "function_declarator",
+    "name": "Service::record_activity(Database &db, const std::string &account, const std::string &kind, int lease)"
+  },
+  {
+    "path": "src/activity.cpp",
+    "line": 5,
+    "kind": "function_definition",
+    "name": "void Service::record_activity(Database &db, const std::string &account, const std::string &kind, int lease) {"
+  },
+  {
+    "path": "src/activity.cpp",
+    "line": 34,
+    "kind": "function_declarator",
+    "name": "Service::record_companions(Database &db, const std::string &account, const std::string &room,"
+  },
+  {
+    "path": "src/activity.cpp",
+    "line": 34,
+    "kind": "function_definition",
+    "name": "void Service::record_companions(Database &db, const std::string &account, const std::string &room,"
+  },
+  {
+    "path": "src/activity.cpp",
+    "line": 59,
+    "kind": "function_declarator",
+    "name": "Service::activity(Database &db, const std::string &account)"
+  },
+  {
+    "path": "src/activity.cpp",
+    "line": 59,
+    "kind": "function_definition",
+    "name": "Json Service::activity(Database &db, const std::string &account) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 10,
+    "kind": "function_declarator",
+    "name": "canonical(const Json &value)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 10,
+    "kind": "function_definition",
+    "name": "std::string canonical(const Json &value) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 13,
+    "kind": "function_declarator",
+    "name": "lower(std::string value)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 13,
+    "kind": "function_definition",
+    "name": "std::string lower(std::string value) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 18,
+    "kind": "function_declarator",
+    "name": "account_policy()"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 18,
+    "kind": "function_definition",
+    "name": "const Json &account_policy() {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 33,
+    "kind": "function_declarator",
+    "name": "validate_name(const std::string &name)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 33,
+    "kind": "function_definition",
+    "name": "void validate_name(const std::string &name) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 45,
+    "kind": "function_declarator",
+    "name": "validate_password(const Json &body, const std::string &username)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 45,
+    "kind": "function_definition",
+    "name": "void validate_password(const Json &body, const std::string &username) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 54,
+    "kind": "function_declarator",
+    "name": "client_description(std::string agent)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 54,
+    "kind": "function_definition",
+    "name": "Json client_description(std::string agent) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 55,
+    "kind": "lambda_expression",
+    "name": "[&](const char *s) { return agent.find(s) != std::string::npos; }"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 69,
+    "kind": "function_declarator",
+    "name": "value(Database &db, const std::string &kind, const std::string &id, bool consume = false,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 69,
+    "kind": "function_definition",
+    "name": "Json value(Database &db, const std::string &kind, const std::string &id, bool consume = false,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 81,
+    "kind": "function_declarator",
+    "name": "put(Database &db, const std::string &kind, const std::string &id, const Json &body, int lifetime,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 81,
+    "kind": "function_definition",
+    "name": "void put(Database &db, const std::string &kind, const std::string &id, const Json &body, int lifetime,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 93,
+    "kind": "function_declarator",
+    "name": "account(Database &db, const std::string &identifier, bool resolve = false)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 93,
+    "kind": "function_definition",
+    "name": "Json account(Database &db, const std::string &identifier, bool resolve = false) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 102,
+    "kind": "function_declarator",
+    "name": "active(const Json &device)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 102,
+    "kind": "function_definition",
+    "name": "bool active(const Json &device) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 108,
+    "kind": "function_declarator",
+    "name": "device_expiry(const Json &device)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 108,
+    "kind": "function_definition",
+    "name": "int64_t device_expiry(const Json &device) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 112,
+    "kind": "function_declarator",
+    "name": "check_key(const Json &key)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 112,
+    "kind": "function_definition",
+    "name": "void check_key(const Json &key) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 115,
+    "kind": "function_declarator",
+    "name": "check_signature(const Json &key, const std::string &message, const std::string &signature)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 115,
+    "kind": "function_definition",
+    "name": "void check_signature(const Json &key, const std::string &message, const std::string &signature) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 119,
+    "kind": "function_declarator",
+    "name": "check_state(const Json &state, const std::string &id, bool initial = true)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 119,
+    "kind": "function_definition",
+    "name": "void check_state(const Json &state, const std::string &id, bool initial = true) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 132,
+    "kind": "function_declarator",
+    "name": "cookie_value(const std::string &header)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 132,
+    "kind": "function_definition",
+    "name": "std::string cookie_value(const std::string &header) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 147,
+    "kind": "function_declarator",
+    "name": "session(Database &db, const BrowserRequest &request, bool write)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 147,
+    "kind": "function_definition",
+    "name": "Json session(Database &db, const BrowserRequest &request, bool write) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 159,
+    "kind": "function_declarator",
+    "name": "smtp_enabled(const Json &settings)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 159,
+    "kind": "function_definition",
+    "name": "bool smtp_enabled(const Json &settings) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 162,
+    "kind": "function_declarator",
+    "name": "verify_mail(const Json &proof, const Json &body, const std::string &purpose,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 162,
+    "kind": "function_definition",
+    "name": "std::string verify_mail(const Json &proof, const Json &body, const std::string &purpose,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 170,
+    "kind": "function_declarator",
+    "name": "mail_candidates(Database &db, const std::string &mailbox)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 170,
+    "kind": "function_definition",
+    "name": "Json mail_candidates(Database &db, const std::string &mailbox) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 187,
+    "kind": "function_declarator",
+    "name": "choose_mail(Database &db, const std::string &mailbox, const std::string &id)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 187,
+    "kind": "function_definition",
+    "name": "void choose_mail(Database &db, const std::string &mailbox, const std::string &id) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 193,
+    "kind": "function_declarator",
+    "name": "rate(Database &db, const std::string &key, int limit, int seconds = 60)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 193,
+    "kind": "function_definition",
+    "name": "void rate(Database &db, const std::string &key, int limit, int seconds = 60) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 201,
+    "kind": "function_declarator",
+    "name": "query_decode(std::string_view value)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 201,
+    "kind": "function_definition",
+    "name": "std::string query_decode(std::string_view value) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 221,
+    "kind": "function_declarator",
+    "name": "Service::browser(Database &db, const BrowserRequest &request)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 221,
+    "kind": "function_definition",
+    "name": "BrowserReply Service::browser(Database &db, const BrowserRequest &request) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 278,
+    "kind": "function_declarator",
+    "name": "limiting(db)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 286,
+    "kind": "function_declarator",
+    "name": "consumption(db)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 287,
+    "kind": "lambda_expression",
+    "name": "[&](const char *kind, const char *field) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 307,
+    "kind": "function_declarator",
+    "name": "transaction(db)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 314,
+    "kind": "function_declarator",
+    "name": "Service::browser_api(Database &db, const BrowserRequest &request, const std::string &path,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 314,
+    "kind": "function_definition",
+    "name": "Json Service::browser_api(Database &db, const BrowserRequest &request, const std::string &path,"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 321,
+    "kind": "lambda_expression",
+    "name": "[&](const std::string &id) { return hmac_sha256(audience_key, id); }"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 322,
+    "kind": "lambda_expression",
+    "name": "[&](const Json &message) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 325,
+    "kind": "lambda_expression",
+    "name": "[&](const std::string &id) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 333,
+    "kind": "lambda_expression",
+    "name": "[&](const std::string &id, const Json &device) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 344,
+    "kind": "lambda_expression",
+    "name": "[&](const std::string &id, const Json &device) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 766,
+    "kind": "function_declarator",
+    "name": "Service::import_browser(Database &db, const Json &snapshot)"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 766,
+    "kind": "function_definition",
+    "name": "Json Service::import_browser(Database &db, const Json &snapshot) {"
+  },
+  {
+    "path": "src/browser.cpp",
+    "line": 773,
+    "kind": "function_declarator",
+    "name": "transaction(db)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 13,
+    "kind": "function_declarator",
+    "name": "BrowserConfig::load(const Json &value, const std::string &base)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 13,
+    "kind": "function_definition",
+    "name": "BrowserConfig BrowserConfig::load(const Json &value, const std::string &base) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 16,
+    "kind": "lambda_expression",
+    "name": "[&](const char *key) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 37,
+    "kind": "function_declarator",
+    "name": "base64url(std::string_view bytes)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 37,
+    "kind": "function_definition",
+    "name": "std::string base64url(std::string_view bytes) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 54,
+    "kind": "function_declarator",
+    "name": "ssh_field(std::string_view value)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 54,
+    "kind": "function_definition",
+    "name": "std::string ssh_field(std::string_view value) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 64,
+    "kind": "function_declarator",
+    "name": "ssh_signature(const std::string &signature_hex)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 64,
+    "kind": "function_definition",
+    "name": "std::string ssh_signature(const std::string &signature_hex) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 67,
+    "kind": "function_declarator",
+    "name": "ssh_public_key(const std::string &key_hex)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 67,
+    "kind": "function_definition",
+    "name": "std::string ssh_public_key(const std::string &key_hex) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 74,
+    "kind": "function_declarator",
+    "name": "hmac_sha256(std::string_view key, std::string_view message)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 74,
+    "kind": "function_definition",
+    "name": "std::string hmac_sha256(std::string_view key, std::string_view message) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 83,
+    "kind": "function_declarator",
+    "name": "send_browser_mail(const Json &settings, const std::string &mailbox, const std::string &code)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 83,
+    "kind": "function_definition",
+    "name": "void send_browser_mail(const Json &settings, const std::string &mailbox, const std::string &code) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 86,
+    "kind": "struct_specifier",
+    "name": "struct Delivery {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 88,
+    "kind": "function_declarator",
+    "name": "~Delivery()"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 88,
+    "kind": "function_definition",
+    "name": "~Delivery() {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 93,
+    "kind": "lambda_expression",
+    "name": "[]() { return int(curl_global_init(CURL_GLOBAL_DEFAULT)); }"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 97,
+    "kind": "lambda_expression",
+    "name": "[](const std::string &value) {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 105,
+    "kind": "function_declarator",
+    "name": "curl(curl_easy_init(), curl_easy_cleanup)"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 112,
+    "kind": "struct_specifier",
+    "name": "struct Upload {"
+  },
+  {
+    "path": "src/browser_transport.cpp",
+    "line": 116,
+    "kind": "lambda_expression",
+    "name": "[](char *buffer, std::size_t size, std::size_t count, void *opaque) -> std::size_t {"
+  },
+  {
+    "path": "src/config.cpp",
+    "line": 6,
+    "kind": "function_declarator",
+    "name": "Config::load(const std::string &path)"
+  },
+  {
+    "path": "src/config.cpp",
+    "line": 6,
+    "kind": "function_definition",
+    "name": "Config Config::load(const std::string &path) {"
+  },
+  {
+    "path": "src/config.cpp",
+    "line": 41,
+    "kind": "lambda_expression",
+    "name": "[&](const char *name) {"
+  },
+  {
+    "path": "src/config.cpp",
+    "line": 52,
+    "kind": "lambda_expression",
+    "name": "[&](const char *name, int fallback, int low, int high) {"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 11,
+    "kind": "function_declarator",
+    "name": "hex(std::string_view bytes)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 11,
+    "kind": "function_definition",
+    "name": "std::string hex(std::string_view bytes) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 21,
+    "kind": "function_declarator",
+    "name": "unhex(std::string_view input)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 21,
+    "kind": "function_definition",
+    "name": "std::string unhex(std::string_view input) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 23,
+    "kind": "lambda_expression",
+    "name": "[](char c) -> unsigned {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 35,
+    "kind": "function_declarator",
+    "name": "sha256(std::string_view input)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 35,
+    "kind": "function_definition",
+    "name": "std::string sha256(std::string_view input) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 42,
+    "kind": "function_declarator",
+    "name": "random_id()"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 42,
+    "kind": "function_definition",
+    "name": "std::string random_id() {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 47,
+    "kind": "function_declarator",
+    "name": "secure_equal(std::string_view a, std::string_view b)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 47,
+    "kind": "function_definition",
+    "name": "bool secure_equal(std::string_view a, std::string_view b) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 50,
+    "kind": "function_declarator",
+    "name": "verify_ed25519(std::string_view public_key_hex, std::string_view message,\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 50,
+    "kind": "function_definition",
+    "name": "bool verify_ed25519(std::string_view public_key_hex, std::string_view message,\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 59,
+    "kind": "function_declarator",
+    "name": "ctx(EVP_MD_CTX_new(), EVP_MD_CTX_free)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 65,
+    "kind": "function_declarator",
+    "name": "decode_base64(std::string input)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 65,
+    "kind": "function_definition",
+    "name": "std::string decode_base64(std::string input) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 88,
+    "kind": "function_declarator",
+    "name": "ssh_string(std::string_view &blob)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 88,
+    "kind": "function_definition",
+    "name": "std::string ssh_string(std::string_view &blob) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 99,
+    "kind": "function_declarator",
+    "name": "p256_key(const Json &jwk)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 99,
+    "kind": "function_definition",
+    "name": "std::shared_ptr<EVP_PKEY> p256_key(const Json &jwk) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 105,
+    "kind": "function_declarator",
+    "name": "builder(OSSL_PARAM_BLD_new(),\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 123,
+    "kind": "function_declarator",
+    "name": "verify_account_proof(std::string_view public_key, std::string_view message, std::string_view signature)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 123,
+    "kind": "function_definition",
+    "name": "bool verify_account_proof(std::string_view public_key, std::string_view message, std::string_view signature) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 130,
+    "kind": "function_declarator",
+    "name": "sig(ECDSA_SIG_new(), ECDSA_SIG_free)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 139,
+    "kind": "function_declarator",
+    "name": "context(EVP_MD_CTX_new(), EVP_MD_CTX_free)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 144,
+    "kind": "function_declarator",
+    "name": "legacy_identity(const Json &cert, std::string_view issuer_signature)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 144,
+    "kind": "function_definition",
+    "name": "std::pair<std::string, std::string> legacy_identity(const Json &cert, std::string_view issuer_signature) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 161,
+    "kind": "function_declarator",
+    "name": "key_view(key_blob)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 166,
+    "kind": "function_declarator",
+    "name": "sig_view(sig_blob)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 177,
+    "kind": "function_declarator",
+    "name": "verify_delegation(const Json &body, bool require_current)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 177,
+    "kind": "function_definition",
+    "name": "Delegation verify_delegation(const Json &body, bool require_current) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 200,
+    "kind": "function_declarator",
+    "name": "Signer::Signer(const std::string &pem_file)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 200,
+    "kind": "function_definition",
+    "name": "Signer::Signer(const std::string &pem_file) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 206,
+    "kind": "function_declarator",
+    "name": "Signer::Signer(std::shared_ptr<EVP_PKEY> key)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 206,
+    "kind": "function_definition",
+    "name": "Signer::Signer(std::shared_ptr<EVP_PKEY> key) : key_(std::move(key)) {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 209,
+    "kind": "function_declarator",
+    "name": "Signer::public_key() const"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 209,
+    "kind": "function_definition",
+    "name": "std::string Signer::public_key() const {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 216,
+    "kind": "function_declarator",
+    "name": "Signer::sign(std::string_view message) const"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 216,
+    "kind": "function_definition",
+    "name": "std::string Signer::sign(std::string_view message) const {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 217,
+    "kind": "function_declarator",
+    "name": "ctx(EVP_MD_CTX_new(), EVP_MD_CTX_free)"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 226,
+    "kind": "function_declarator",
+    "name": "Signer::token(const Json &claims) const"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 226,
+    "kind": "function_definition",
+    "name": "std::string Signer::token(const Json &claims) const {\r"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 230,
+    "kind": "function_declarator",
+    "name": "Signer::verify(std::string_view encoded, std::string_view audience) const"
+  },
+  {
+    "path": "src/crypto.cpp",
+    "line": 230,
+    "kind": "function_definition",
+    "name": "Json Signer::verify(std::string_view encoded, std::string_view audience) const {\r"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 4,
+    "kind": "function_declarator",
+    "name": "Rows::Rows(PGresult *result)"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 4,
+    "kind": "function_definition",
+    "name": "Rows::Rows(PGresult *result) : result_(result, PQclear) {}"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 5,
+    "kind": "function_declarator",
+    "name": "Rows::size() const"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 5,
+    "kind": "function_definition",
+    "name": "int Rows::size() const {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 8,
+    "kind": "function_declarator",
+    "name": "Rows::at(int row, int col) const"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 8,
+    "kind": "function_definition",
+    "name": "std::string Rows::at(int row, int col) const {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 13,
+    "kind": "function_declarator",
+    "name": "Rows::json(int row, int col) const"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 13,
+    "kind": "function_definition",
+    "name": "Json Rows::json(int row, int col) const {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 16,
+    "kind": "function_declarator",
+    "name": "Rows::number(int row, int col) const"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 16,
+    "kind": "function_definition",
+    "name": "std::int64_t Rows::number(int row, int col) const {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 19,
+    "kind": "function_declarator",
+    "name": "Database::Database(const std::string &conninfo)"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 19,
+    "kind": "function_definition",
+    "name": "Database::Database(const std::string &conninfo) : connection_(nullptr, PQfinish) {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 29,
+    "kind": "function_declarator",
+    "name": "Database::query(std::string_view sql, const Params &params)"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 29,
+    "kind": "function_definition",
+    "name": "Rows Database::query(std::string_view sql, const Params &params) {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 47,
+    "kind": "function_declarator",
+    "name": "Database::lock(std::string key)"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 47,
+    "kind": "function_definition",
+    "name": "void Database::lock(std::string key) {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 50,
+    "kind": "function_declarator",
+    "name": "Database::migrate(const std::string &sql)"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 50,
+    "kind": "function_definition",
+    "name": "void Database::migrate(const std::string &sql) {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 57,
+    "kind": "function_declarator",
+    "name": "Transaction::Transaction(Database &db)"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 57,
+    "kind": "function_definition",
+    "name": "Transaction::Transaction(Database &db) : db_(db) {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 60,
+    "kind": "function_declarator",
+    "name": "Transaction::~Transaction()"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 60,
+    "kind": "function_definition",
+    "name": "Transaction::~Transaction() {"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 68,
+    "kind": "function_declarator",
+    "name": "Transaction::commit()"
+  },
+  {
+    "path": "src/database.cpp",
+    "line": 68,
+    "kind": "function_definition",
+    "name": "void Transaction::commit() {"
+  },
+  {
+    "path": "src/enrollment.cpp",
+    "line": 8,
+    "kind": "function_declarator",
+    "name": "validate_announcement(const Json &body, bool allow_loopback)"
+  },
+  {
+    "path": "src/enrollment.cpp",
+    "line": 8,
+    "kind": "function_definition",
+    "name": "void validate_announcement(const Json &body, bool allow_loopback) {"
+  },
+  {
+    "path": "src/enrollment.cpp",
+    "line": 22,
+    "kind": "function_declarator",
+    "name": "Service::enrollment(Database &db, const std::string &path, const Json &body)"
+  },
+  {
+    "path": "src/enrollment.cpp",
+    "line": 22,
+    "kind": "function_definition",
+    "name": "Json Service::enrollment(Database &db, const std::string &path, const Json &body) {"
+  },
+  {
+    "path": "src/enrollment.cpp",
+    "line": 192,
+    "kind": "function_declarator",
+    "name": "Service::node(Database &db, const std::string &path, const Json &body, const Actor &actor)"
+  },
+  {
+    "path": "src/enrollment.cpp",
+    "line": 192,
+    "kind": "function_definition",
+    "name": "Json Service::node(Database &db, const std::string &path, const Json &body, const Actor &actor) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 9,
+    "kind": "function_declarator",
+    "name": "require(bool condition, std::string_view code, std::string_view message, int status)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 9,
+    "kind": "function_definition",
+    "name": "void require(bool condition, std::string_view code, std::string_view message, int status) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 14,
+    "kind": "function_declarator",
+    "name": "convert(simdjson::dom::element element, unsigned depth)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 14,
+    "kind": "function_definition",
+    "name": "Json convert(simdjson::dom::element element, unsigned depth) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 48,
+    "kind": "function_declarator",
+    "name": "parse_json(std::string_view input, std::size_t limit)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 48,
+    "kind": "function_definition",
+    "name": "Json parse_json(std::string_view input, std::size_t limit) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 51,
+    "kind": "function_declarator",
+    "name": "padded(input)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 57,
+    "kind": "function_declarator",
+    "name": "select_json_backend(std::string_view name)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 57,
+    "kind": "function_definition",
+    "name": "void select_json_backend(std::string_view name) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 65,
+    "kind": "function_declarator",
+    "name": "json_backend()"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 65,
+    "kind": "function_definition",
+    "name": "std::string json_backend() {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 70,
+    "kind": "function_declarator",
+    "name": "text(const Json &value, std::string_view key, std::size_t max)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 70,
+    "kind": "function_definition",
+    "name": "std::string text(const Json &value, std::string_view key, std::size_t max) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 79,
+    "kind": "function_declarator",
+    "name": "integer(const Json &value, std::string_view key, std::int64_t low, std::int64_t high)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 79,
+    "kind": "function_definition",
+    "name": "std::int64_t integer(const Json &value, std::string_view key, std::int64_t low, std::int64_t high) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 89,
+    "kind": "function_declarator",
+    "name": "read_file(const std::string &path, std::size_t max)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 89,
+    "kind": "function_definition",
+    "name": "std::string read_file(const std::string &path, std::size_t max) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 90,
+    "kind": "function_declarator",
+    "name": "stream(path, std::ios::binary)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 96,
+    "kind": "function_declarator",
+    "name": "read_secret(const std::string &path, std::size_t max)"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 96,
+    "kind": "function_definition",
+    "name": "std::string read_secret(const std::string &path, std::size_t max) {"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 105,
+    "kind": "function_declarator",
+    "name": "unix_seconds()"
+  },
+  {
+    "path": "src/json.cpp",
+    "line": 105,
+    "kind": "function_definition",
+    "name": "std::int64_t unix_seconds() {"
+  },
+  {
+    "path": "src/main.cpp",
+    "line": 5,
+    "kind": "function_declarator",
+    "name": "main(int argc, char **argv)"
+  },
+  {
+    "path": "src/main.cpp",
+    "line": 5,
+    "kind": "function_definition",
+    "name": "int main(int argc, char **argv) {"
+  },
+  {
+    "path": "src/main.cpp",
+    "line": 20,
+    "kind": "function_declarator",
+    "name": "service(config)"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 8,
+    "kind": "struct_specifier",
+    "name": "struct Candidate {"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 13,
+    "kind": "function_declarator",
+    "name": "rank_node(const std::string &key, const std::string &node, double weight)"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 13,
+    "kind": "function_definition",
+    "name": "double rank_node(const std::string &key, const std::string &node, double weight) {"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 20,
+    "kind": "function_declarator",
+    "name": "Service::placement(Database &db, const std::string &path, const Json &body, const Actor &actor)"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 20,
+    "kind": "function_definition",
+    "name": "Json Service::placement(Database &db, const std::string &path, const Json &body, const Actor &actor) {"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 226,
+    "kind": "lambda_expression",
+    "name": "[](const auto &a, const auto &b) { return a.rank < b.rank; }"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 307,
+    "kind": "lambda_expression",
+    "name": "[](const auto &a, const auto &b) {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 15,
+    "kind": "function_declarator",
+    "name": "endpoint(const std::string &value, bool allow_loopback)"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 15,
+    "kind": "function_definition",
+    "name": "tcp::endpoint endpoint(const std::string &value, bool allow_loopback) {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 41,
+    "kind": "function_declarator",
+    "name": "probe_node(const std::string &game, const std::string &proof, const std::string &key,"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 41,
+    "kind": "function_definition",
+    "name": "bool probe_node(const std::string &game, const std::string &proof, const std::string &key,"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 46,
+    "kind": "function_declarator",
+    "name": "tls(ssl::context::tls_client)"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 49,
+    "kind": "function_declarator",
+    "name": "stream(io, tls)"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 50,
+    "kind": "function_declarator",
+    "name": "game_socket(io)"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 62,
+    "kind": "lambda_expression",
+    "name": "[&] {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 69,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code error) {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 73,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code error) {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 78,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code e) {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 83,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code e2) {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 88,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code e3, std::size_t) {"
+  },
+  {
+    "path": "src/probe.cpp",
+    "line": 93,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code e4, std::size_t) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 31,
+    "kind": "function_declarator",
+    "name": "bearer_token(const Request &request)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 31,
+    "kind": "function_definition",
+    "name": "std::string bearer_token(const Request &request) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 38,
+    "kind": "function_declarator",
+    "name": "public_error(const Error &e)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 38,
+    "kind": "function_definition",
+    "name": "Reply public_error(const Error &e) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 41,
+    "kind": "function_declarator",
+    "name": "client_peer(const Request &request, const std::string &transport_peer, const Config &config)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 41,
+    "kind": "function_definition",
+    "name": "std::string client_peer(const Request &request, const std::string &transport_peer, const Config &config) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 52,
+    "kind": "struct_specifier",
+    "name": "struct State {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 61,
+    "kind": "function_declarator",
+    "name": "State(const Config &c)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 61,
+    "kind": "function_definition",
+    "name": "explicit State(const Config &c)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 64,
+    "kind": "function_declarator",
+    "name": "allow_peer(const std::string &peer)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 64,
+    "kind": "function_definition",
+    "name": "bool allow_peer(const std::string &peer) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 67,
+    "kind": "function_declarator",
+    "name": "lock(rate_mutex)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 81,
+    "kind": "function_declarator",
+    "name": "worker_database()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 81,
+    "kind": "function_definition",
+    "name": "static std::unique_ptr<Database> &worker_database() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 86,
+    "kind": "function_declarator",
+    "name": "submit(net::any_io_executor executor, Work work, std::function<void(Result)> done, Failure failure)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 86,
+    "kind": "function_definition",
+    "name": "void submit(net::any_io_executor executor, Work work, std::function<void(Result)> done, Failure failure) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 97,
+    "kind": "lambda_expression",
+    "name": "[this, executor, work = std::move(work), done = std::move(done), failure]() mutable {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 98,
+    "kind": "struct_specifier",
+    "name": "struct Job {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 100,
+    "kind": "function_declarator",
+    "name": "~Job()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 100,
+    "kind": "function_definition",
+    "name": "~Job() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 119,
+    "kind": "lambda_expression",
+    "name": "[done = std::move(done), reply = std::move(reply)]() mutable {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 124,
+    "kind": "function_declarator",
+    "name": "execute_browser(net::any_io_executor executor, BrowserRequest request,"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 124,
+    "kind": "function_definition",
+    "name": "void execute_browser(net::any_io_executor executor, BrowserRequest request,"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 128,
+    "kind": "lambda_expression",
+    "name": "[this, request = std::move(request)](Database &db) { return service.browser(db, request); }"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 130,
+    "kind": "lambda_expression",
+    "name": "[](const Error &e) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 136,
+    "kind": "function_declarator",
+    "name": "execute(net::any_io_executor executor, std::string path, std::string token, std::string input,"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 136,
+    "kind": "function_definition",
+    "name": "void execute(net::any_io_executor executor, std::string path, std::string token, std::string input,"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 140,
+    "kind": "lambda_expression",
+    "name": "[this, path = std::move(path), token = std::move(token), input = std::move(input)](Database &db) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 145,
+    "kind": "function_declarator",
+    "name": "maintenance()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 145,
+    "kind": "function_definition",
+    "name": "void maintenance() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 152,
+    "kind": "lambda_expression",
+    "name": "[this] {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 154,
+    "kind": "function_declarator",
+    "name": "db(conninfo)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 163,
+    "kind": "struct_specifier",
+    "name": "struct ConnectionLease {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 165,
+    "kind": "function_declarator",
+    "name": "ConnectionLease(State &s)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 165,
+    "kind": "function_definition",
+    "name": "explicit ConnectionLease(State &s) : state(s) {}"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 166,
+    "kind": "function_declarator",
+    "name": "~ConnectionLease()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 166,
+    "kind": "function_definition",
+    "name": "~ConnectionLease() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 170,
+    "kind": "class_specifier",
+    "name": "class WebSocket : public std::enable_shared_from_this<WebSocket> {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 182,
+    "kind": "function_declarator",
+    "name": "WebSocket(Stream stream, State &state, std::shared_ptr<ConnectionLease> lease, std::string token,"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 182,
+    "kind": "function_definition",
+    "name": "WebSocket(Stream stream, State &state, std::shared_ptr<ConnectionLease> lease, std::string token,"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 186,
+    "kind": "function_declarator",
+    "name": "start(Request request)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 186,
+    "kind": "function_definition",
+    "name": "void start(Request request) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 191,
+    "kind": "lambda_expression",
+    "name": "[self = shared_from_this()](beast::error_code error) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 196,
+    "kind": "function_declarator",
+    "name": "read()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 196,
+    "kind": "function_definition",
+    "name": "void read() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 197,
+    "kind": "lambda_expression",
+    "name": "[self = shared_from_this()](beast::error_code error, std::size_t) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 225,
+    "kind": "lambda_expression",
+    "name": "[self, id, subscribe](Reply reply) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 241,
+    "kind": "function_declarator",
+    "name": "write(const Json &value)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 241,
+    "kind": "function_definition",
+    "name": "void write(const Json &value) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 250,
+    "kind": "function_declarator",
+    "name": "flush()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 250,
+    "kind": "function_definition",
+    "name": "void flush() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 253,
+    "kind": "lambda_expression",
+    "name": "[self = shared_from_this()](beast::error_code error, std::size_t) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 263,
+    "kind": "function_declarator",
+    "name": "close_socket()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 263,
+    "kind": "function_definition",
+    "name": "void close_socket() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 269,
+    "kind": "function_declarator",
+    "name": "poll_events()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 269,
+    "kind": "function_definition",
+    "name": "void poll_events() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 271,
+    "kind": "lambda_expression",
+    "name": "[weak = weak_from_this()](beast::error_code error) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 276,
+    "kind": "lambda_expression",
+    "name": "[self](Reply reply) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 291,
+    "kind": "class_specifier",
+    "name": "class HttpSession : public std::enable_shared_from_this<HttpSession> {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 302,
+    "kind": "function_declarator",
+    "name": "HttpSession(tcp::socket socket, ssl::context &tls, State &state)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 302,
+    "kind": "function_definition",
+    "name": "HttpSession(tcp::socket socket, ssl::context &tls, State &state)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 309,
+    "kind": "function_declarator",
+    "name": "start()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 309,
+    "kind": "function_definition",
+    "name": "void start() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 312,
+    "kind": "lambda_expression",
+    "name": "[self = shared_from_this()](beast::error_code error) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 317,
+    "kind": "function_declarator",
+    "name": "read()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 317,
+    "kind": "function_definition",
+    "name": "void read() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 323,
+    "kind": "lambda_expression",
+    "name": "[self = shared_from_this()](beast::error_code error, std::size_t) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 353,
+    "kind": "lambda_expression",
+    "name": "[self, request](BrowserReply reply) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 373,
+    "kind": "lambda_expression",
+    "name": "[self, request, token, channel](Reply reply) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 383,
+    "kind": "function_declarator",
+    "name": "respond(Reply reply, bool keep_alive)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 383,
+    "kind": "function_definition",
+    "name": "void respond(Reply reply, bool keep_alive) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 386,
+    "kind": "function_declarator",
+    "name": "respond_browser(BrowserReply reply, bool keep_alive)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 386,
+    "kind": "function_definition",
+    "name": "void respond_browser(BrowserReply reply, bool keep_alive) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 412,
+    "kind": "lambda_expression",
+    "name": "[self = shared_from_this(), keep_alive](beast::error_code error, std::size_t) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 416,
+    "kind": "lambda_expression",
+    "name": "[self](beast::error_code) {}"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 420,
+    "kind": "class_specifier",
+    "name": "class Listener : public std::enable_shared_from_this<Listener> {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 427,
+    "kind": "function_declarator",
+    "name": "Listener(net::io_context &io, ssl::context &tls, State &state)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 427,
+    "kind": "function_definition",
+    "name": "Listener(net::io_context &io, ssl::context &tls, State &state)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 430,
+    "kind": "function_declarator",
+    "name": "accept()"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 430,
+    "kind": "function_definition",
+    "name": "void accept() {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 432,
+    "kind": "lambda_expression",
+    "name": "[self = shared_from_this()](beast::error_code error, tcp::socket socket) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 448,
+    "kind": "function_declarator",
+    "name": "run_server(const Config &config)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 448,
+    "kind": "function_definition",
+    "name": "int run_server(const Config &config) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 450,
+    "kind": "function_declarator",
+    "name": "state(config)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 454,
+    "kind": "function_declarator",
+    "name": "tls(ssl::context::tls_server)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 461,
+    "kind": "function_declarator",
+    "name": "signals(io, SIGINT, SIGTERM)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 462,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code, int) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 466,
+    "kind": "function_declarator",
+    "name": "maintenance(io)"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 468,
+    "kind": "lambda_expression",
+    "name": "[&] {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 470,
+    "kind": "lambda_expression",
+    "name": "[&](beast::error_code error) {"
+  },
+  {
+    "path": "src/server.cpp",
+    "line": 487,
+    "kind": "lambda_expression",
+    "name": "[&] { io.run(); }"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 6,
+    "kind": "function_declarator",
+    "name": "Service::Service(Config config)"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 6,
+    "kind": "function_definition",
+    "name": "Service::Service(Config config) : config_(std::move(config)), signer_(config_.signing_key) {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 27,
+    "kind": "function_declarator",
+    "name": "Service::actor_kind(const Actor &actor, std::string_view kind) const"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 27,
+    "kind": "function_definition",
+    "name": "void Service::actor_kind(const Actor &actor, std::string_view kind) const {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 30,
+    "kind": "function_declarator",
+    "name": "Service::idempotency_lock(Database &db, std::string_view actor, std::string_view key) const"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 30,
+    "kind": "function_definition",
+    "name": "void Service::idempotency_lock(Database &db, std::string_view actor, std::string_view key) const {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 33,
+    "kind": "function_declarator",
+    "name": "Service::grant(const Actor &actor) const"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 33,
+    "kind": "function_definition",
+    "name": "Json Service::grant(const Actor &actor) const {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 47,
+    "kind": "function_declarator",
+    "name": "Service::authenticate(Database &db, std::string_view token)"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 47,
+    "kind": "function_definition",
+    "name": "Actor Service::authenticate(Database &db, std::string_view token) {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 66,
+    "kind": "function_declarator",
+    "name": "Service::dispatch(Database &db, const std::string &path, std::string_view bearer, const Json &body)"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 66,
+    "kind": "function_definition",
+    "name": "Reply Service::dispatch(Database &db, const std::string &path, std::string_view bearer, const Json &body) {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 78,
+    "kind": "function_declarator",
+    "name": "transaction(db)"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 165,
+    "kind": "function_declarator",
+    "name": "Service::admin(Database &db, const std::string &path, const Json &body)"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 165,
+    "kind": "function_definition",
+    "name": "Json Service::admin(Database &db, const std::string &path, const Json &body) {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 235,
+    "kind": "function_declarator",
+    "name": "Service::maintain(Database &db)"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 235,
+    "kind": "function_definition",
+    "name": "void Service::maintain(Database &db) {"
+  },
+  {
+    "path": "src/service.cpp",
+    "line": 236,
+    "kind": "function_declarator",
+    "name": "transaction(db)"
+  },
+  {
+    "path": "src/social.cpp",
+    "line": 6,
+    "kind": "function_declarator",
+    "name": "Service::presence(Database &db, const std::string &path, const Json &body, const Actor &actor)"
+  },
+  {
+    "path": "src/social.cpp",
+    "line": 6,
+    "kind": "function_definition",
+    "name": "Json Service::presence(Database &db, const std::string &path, const Json &body, const Actor &actor) {"
+  },
+  {
+    "path": "src/social.cpp",
+    "line": 71,
+    "kind": "function_declarator",
+    "name": "Service::social(Database &db, const std::string &path, const Json &body, const Actor &actor)"
+  },
+  {
+    "path": "src/social.cpp",
+    "line": 71,
+    "kind": "function_definition",
+    "name": "Json Service::social(Database &db, const std::string &path, const Json &body, const Actor &actor) {"
+  },
+  {
+    "path": "src/social_import.cpp",
+    "line": 9,
+    "kind": "function_declarator",
+    "name": "Service::import_social(Database &db, const Json &events)"
+  },
+  {
+    "path": "src/social_import.cpp",
+    "line": 9,
+    "kind": "function_definition",
+    "name": "Json Service::import_social(Database &db, const Json &events) {"
+  },
+  {
+    "path": "src/social_import.cpp",
+    "line": 12,
+    "kind": "function_declarator",
+    "name": "transaction(db)"
+  },
+  {
+    "path": "src/social_import.cpp",
+    "line": 30,
+    "kind": "lambda_expression",
+    "name": "[&](const Json &event) {"
+  },
+  {
+    "path": "src/social_import.cpp",
+    "line": 37,
+    "kind": "lambda_expression",
+    "name": "[](const Json &e) {"
+  },
+  {
+    "path": "src/social_import.cpp",
+    "line": 94,
+    "kind": "lambda_expression",
+    "name": "[](const Json *x, const Json *y) {"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 25,
+    "kind": "FunctionDef",
+    "name": "canonical"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 29,
+    "kind": "FunctionDef",
+    "name": "encoded"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 33,
+    "kind": "FunctionDef",
+    "name": "public"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 39,
+    "kind": "FunctionDef",
+    "name": "signature"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 44,
+    "kind": "ClassDef",
+    "name": "BrowserClient"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 45,
+    "kind": "FunctionDef",
+    "name": "__init__"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 53,
+    "kind": "FunctionDef",
+    "name": "call"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 67,
+    "kind": "FunctionDef",
+    "name": "login"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 75,
+    "kind": "ClassDef",
+    "name": "SmtpFixture"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 77,
+    "kind": "FunctionDef",
+    "name": "__init__"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 80,
+    "kind": "ClassDef",
+    "name": "Handler"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 81,
+    "kind": "FunctionDef",
+    "name": "handle"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 116,
+    "kind": "FunctionDef",
+    "name": "close"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 122,
+    "kind": "ClassDef",
+    "name": "BrowserIdentityTests"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 124,
+    "kind": "FunctionDef",
+    "name": "setUpClass"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 147,
+    "kind": "FunctionDef",
+    "name": "ssh_field"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 156,
+    "kind": "FunctionDef",
+    "name": "device_record"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 174,
+    "kind": "FunctionDef",
+    "name": "client"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 177,
+    "kind": "FunctionDef",
+    "name": "sql"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 181,
+    "kind": "FunctionDef",
+    "name": "register"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 192,
+    "kind": "FunctionDef",
+    "name": "test_existing_identity_and_revision_survive_import"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 204,
+    "kind": "FunctionDef",
+    "name": "test_static_landscape_is_bounded_and_not_a_general_file_endpoint"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 215,
+    "kind": "FunctionDef",
+    "name": "test_failed_signature_burns_nonce"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 222,
+    "kind": "FunctionDef",
+    "name": "test_cookie_csrf_origin_and_logout"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 232,
+    "kind": "FunctionDef",
+    "name": "test_email_tls_delivery_and_one_use"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 244,
+    "kind": "FunctionDef",
+    "name": "test_refresh_race_cannot_revive_revocation"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 249,
+    "kind": "FunctionDef",
+    "name": "refresh"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 260,
+    "kind": "FunctionDef",
+    "name": "test_memories_are_private_and_merge_heartbeats"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 293,
+    "kind": "FunctionDef",
+    "name": "test_registration_policy_and_reserved_names"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 305,
+    "kind": "FunctionDef",
+    "name": "test_zz_mailbox_recovery_preserves_identity_and_revokes_sessions"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 307,
+    "kind": "FunctionDef",
+    "name": "send"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 334,
+    "kind": "FunctionDef",
+    "name": "test_signed_social_import_is_idempotent_and_atomic"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 337,
+    "kind": "FunctionDef",
+    "name": "event"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 367,
+    "kind": "FunctionDef",
+    "name": "test_social_import_rejects_missing_certificate"
+  },
+  {
+    "path": "tests/browser_identity.py",
+    "line": 373,
+    "kind": "FunctionDef",
+    "name": "test_web_sessions_are_owned_and_show_client_details"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 33,
+    "kind": "FunctionDef",
+    "name": "free_port"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 39,
+    "kind": "FunctionDef",
+    "name": "write_private"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 44,
+    "kind": "FunctionDef",
+    "name": "certificate"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 59,
+    "kind": "ClassDef",
+    "name": "Client"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 60,
+    "kind": "FunctionDef",
+    "name": "__init__"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 64,
+    "kind": "FunctionDef",
+    "name": "call"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 78,
+    "kind": "ClassDef",
+    "name": "NodeProof"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 79,
+    "kind": "FunctionDef",
+    "name": "__init__"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 83,
+    "kind": "ClassDef",
+    "name": "Handler"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 84,
+    "kind": "FunctionDef",
+    "name": "do_POST"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 97,
+    "kind": "FunctionDef",
+    "name": "log_message"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 111,
+    "kind": "FunctionDef",
+    "name": "accept_game"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 123,
+    "kind": "FunctionDef",
+    "name": "close"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 132,
+    "kind": "ClassDef",
+    "name": "WebSocketClient"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 134,
+    "kind": "FunctionDef",
+    "name": "__init__"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 158,
+    "kind": "FunctionDef",
+    "name": "send_frame"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 164,
+    "kind": "FunctionDef",
+    "name": "send"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 167,
+    "kind": "FunctionDef",
+    "name": "receive"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 187,
+    "kind": "FunctionDef",
+    "name": "close"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 192,
+    "kind": "ClassDef",
+    "name": "Environment"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 193,
+    "kind": "FunctionDef",
+    "name": "__init__"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 238,
+    "kind": "FunctionDef",
+    "name": "start"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 251,
+    "kind": "FunctionDef",
+    "name": "restart"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 256,
+    "kind": "FunctionDef",
+    "name": "replica"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 273,
+    "kind": "FunctionDef",
+    "name": "identity"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 283,
+    "kind": "FunctionDef",
+    "name": "node"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 298,
+    "kind": "FunctionDef",
+    "name": "reserve"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 306,
+    "kind": "FunctionDef",
+    "name": "close"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 328,
+    "kind": "ClassDef",
+    "name": "ControlIntegration"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 329,
+    "kind": "FunctionDef",
+    "name": "test_21_room_directory_uses_published_policy_and_current_host"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 380,
+    "kind": "FunctionDef",
+    "name": "test_22_expired_host_is_not_listed_or_resolvable"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 397,
+    "kind": "FunctionDef",
+    "name": "setUpClass"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 403,
+    "kind": "FunctionDef",
+    "name": "test_20_public_enrollment_is_optional_scoped_and_revocable"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 430,
+    "kind": "FunctionDef",
+    "name": "test_19_feedback_durable_private_idempotent"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 442,
+    "kind": "FunctionDef",
+    "name": "friends"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 449,
+    "kind": "FunctionDef",
+    "name": "test_01_long_credential_registers_distinct_nodes"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 454,
+    "kind": "FunctionDef",
+    "name": "test_02_unauthorized_scopes"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 459,
+    "kind": "FunctionDef",
+    "name": "test_03_proof_replay_and_epoch"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 468,
+    "kind": "FunctionDef",
+    "name": "test_04_presence_multidevice_sequence"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 480,
+    "kind": "FunctionDef",
+    "name": "test_05_presence_privacy_and_unknown"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 486,
+    "kind": "FunctionDef",
+    "name": "test_06_invite_cross_region_owner_and_receipts"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 515,
+    "kind": "Lambda",
+    "name": "<lambda>"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 531,
+    "kind": "FunctionDef",
+    "name": "test_07_reservation_idempotence_and_auth"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 541,
+    "kind": "FunctionDef",
+    "name": "test_08_one_slot_hundred_racers"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 553,
+    "kind": "Lambda",
+    "name": "<lambda>"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 560,
+    "kind": "FunctionDef",
+    "name": "test_09_restart_durable_outbox"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 572,
+    "kind": "FunctionDef",
+    "name": "test_10_credential_revoke_preserves_node_identity"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 588,
+    "kind": "FunctionDef",
+    "name": "test_11_device_revoke"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 593,
+    "kind": "FunctionDef",
+    "name": "test_12_legacy_identity_preserves_account"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 597,
+    "kind": "Lambda",
+    "name": "<lambda>"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 602,
+    "kind": "Lambda",
+    "name": "<lambda>"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 622,
+    "kind": "FunctionDef",
+    "name": "sign"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 641,
+    "kind": "FunctionDef",
+    "name": "test_13_invite_revoke_blocks_join"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 651,
+    "kind": "FunctionDef",
+    "name": "test_14_websocket_push_and_replay"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 668,
+    "kind": "FunctionDef",
+    "name": "test_15_forged_derived_account_rejected"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 676,
+    "kind": "FunctionDef",
+    "name": "test_16_draining_affects_only_new_allocations"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 686,
+    "kind": "FunctionDef",
+    "name": "test_17_node_budget_and_probe_proof"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 698,
+    "kind": "FunctionDef",
+    "name": "test_18_replica_routes_events_during_primary_exit"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 15,
+    "kind": "ClassDef",
+    "name": "LimitedBuildTests"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 16,
+    "kind": "FunctionDef",
+    "name": "run_command"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 22,
+    "kind": "FunctionDef",
+    "name": "test_success_and_exit_code"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 28,
+    "kind": "FunctionDef",
+    "name": "test_insufficient_reserve_skips_child"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 34,
+    "kind": "FunctionDef",
+    "name": "test_address_space_cap"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 40,
+    "kind": "FunctionDef",
+    "name": "assert_stopped"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 49,
+    "kind": "FunctionDef",
+    "name": "test_deadline_and_grandchild_cleanup"
+  },
+  {
+    "path": "tests/limited_build.py",
+    "line": 61,
+    "kind": "FunctionDef",
+    "name": "test_supervisor_termination_cleans_child"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 5,
+    "kind": "function_declarator",
+    "name": "main()"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 5,
+    "kind": "function_definition",
+    "name": "int main() {"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 7,
+    "kind": "lambda_expression",
+    "name": "[&](bool value) {"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 12,
+    "kind": "lambda_expression",
+    "name": "[&](auto action) {"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 24,
+    "kind": "lambda_expression",
+    "name": "[] { unhex(\"abX0\"); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 25,
+    "kind": "lambda_expression",
+    "name": "[] { unhex(\"abc\"); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 27,
+    "kind": "lambda_expression",
+    "name": "[] { parse_json(R\"({\"a\":1,\"a\":2})\"); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 28,
+    "kind": "lambda_expression",
+    "name": "[] { parse_json(\"{bad}\"); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 29,
+    "kind": "lambda_expression",
+    "name": "[] { parse_json(std::string(65537, ' ')); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 30,
+    "kind": "lambda_expression",
+    "name": "[] { integer(Json({{\"x\", 18446744073709551615ULL}}), \"x\", 0, INT64_MAX); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 31,
+    "kind": "lambda_expression",
+    "name": "[] { text(Json({{\"x\", \"\"}}), \"x\"); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 33,
+    "kind": "function_declarator",
+    "name": "signer(key)"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 39,
+    "kind": "lambda_expression",
+    "name": "[&] { signer.verify(token, \"other\"); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 40,
+    "kind": "lambda_expression",
+    "name": "[&] { signer.verify(signer.token({{\"aud\", \"unit\"}, {\"exp\", 1}}), \"unit\"); }"
+  },
+  {
+    "path": "tests/units.cpp",
+    "line": 41,
+    "kind": "lambda_expression",
+    "name": "[&] { signer.verify(token + \"00\", \"unit\"); }"
+  }
+]

@@ -1,0 +1,12 @@
+/build/
+/out/
+/validation-artifacts/
+/.cache/
+/.env
+/.env.*
+/data/
+/secrets/
+/CMakeUserPresets.json
+/.vcpkg/
+__pycache__/
+*.pyc
