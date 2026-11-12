@@ -1,0 +1,51 @@
+name: control verification
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build libboost-dev libssl-dev libpq-dev libsimdjson-dev nlohmann-json3-dev libcurl4-openssl-dev postgresql
+      - run: python -m pip install -r requirements-dev.txt
+      - run: cmake --preset release && cmake --build --preset release --parallel 2 && ctest --preset release
+      - run: python scripts/inventory.py --check && python scripts/check_docs.py
+      - run: python tests/limited_build.py
+      - run: python tests/integration.py
+        env:
+          CONTROL_BINARY: ${{ github.workspace }}/build/release/buggcraft-control
+      - run: python tests/browser_identity.py
+        env:
+          CONTROL_BINARY: ${{ github.workspace }}/build/release/buggcraft-control
+      - run: python tests/integration.py
+        env:
+          CONTROL_BINARY: ${{ github.workspace }}/build/release/buggcraft-control
+          CONTROL_JSON_BACKEND: fallback
+  portable-build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2022
+            triplet: x64-windows
+          - os: macos-15
+            triplet: arm64-osx
+          - os: macos-15-intel
+            triplet: x64-osx
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: microsoft/vcpkg
+          ref: e529425f2f43d773d0a59517c8d89367d68bb7fd
+          path: .vcpkg
+      - name: Bootstrap Windows
+        if: runner.os == 'Windows'
+        run: ./.vcpkg/bootstrap-vcpkg.bat -disableMetrics
+      - name: Bootstrap macOS
+        if: runner.os == 'macOS'
+        run: ./.vcpkg/bootstrap-vcpkg.sh -disableMetrics
+      - name: Configure
+        run: cmake -S . -B build/portable -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/.vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }} -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build/portable --config Release --parallel 2
+      - run: ctest --test-dir build/portable --build-config Release --output-on-failure

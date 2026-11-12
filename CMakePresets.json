@@ -1,0 +1,10 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {"major": 3, "minor": 25, "patch": 0},
+  "configurePresets": [
+    {"name": "release", "generator": "Ninja", "binaryDir": "${sourceDir}/build/release", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release"}},
+    {"name": "sanitizers", "inherits": "release", "binaryDir": "${sourceDir}/build/sanitizers", "cacheVariables": {"CMAKE_BUILD_TYPE": "Debug", "CONTROL_SANITIZERS": "ON", "CONTROL_LTO": "OFF"}}
+  ],
+  "buildPresets": [{"name": "release", "configurePreset": "release"}, {"name": "sanitizers", "configurePreset": "sanitizers"}],
+  "testPresets": [{"name": "release", "configurePreset": "release", "output": {"outputOnFailure": true}}, {"name": "sanitizers", "configurePreset": "sanitizers", "output": {"outputOnFailure": true}}]
+}

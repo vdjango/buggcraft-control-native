@@ -1,0 +1,10 @@
+.git
+build
+out
+validation-artifacts
+data
+secrets
+__pycache__
+.cache
+.vcpkg
+.env*

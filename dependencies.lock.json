@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "vcpkg_baseline": "e529425f2f43d773d0a59517c8d89367d68bb7fd",
+  "linux_validation": {
+    "distribution": "Ubuntu 24.04 x86-64",
+    "gcc": "13.3.0",
+    "boost": "1.83.0-2.1ubuntu3.2",
+    "simdjson": "3.6.4-1",
+    "nlohmann_json": "3.11.3-1",
+    "openssl": "3.0.13",
+    "libpq": "16.15-0ubuntu0.24.04.1",
+    "libcurl": "8.5.0-2ubuntu10.9"
+  },
+  "policy": "Linux package versions record the tested build; use maintained distribution security updates and rerun acceptance. vcpkg portable builds use the explicit baseline. No source copied from the adjacent AGPL runtime.",
+  "windows_validation": {
+    "compiler": "MSVC 19.44",
+    "architecture": "x64",
+    "boost_headers": "1.83",
+    "simdjson": "3.6.4 singleheader",
+    "libpq_runtime": "14.12 from development-only psycopg-binary 3.2.3 wheel",
+    "openssl": "3.x existing native development DLLs; not redistributable package validation"
+  }
+}

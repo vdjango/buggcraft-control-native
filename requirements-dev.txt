@@ -1,0 +1,5 @@
+tree-sitter==0.25.2
+tree-sitter-cpp==0.23.4
+cryptography>=44,<47
+requests>=2.32,<3
+websockets>=14,<16

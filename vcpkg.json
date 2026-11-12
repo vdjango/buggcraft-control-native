@@ -1,0 +1,6 @@
+{
+  "name": "buggcraft-control-native",
+  "version-string": "0.1.0",
+  "builtin-baseline": "e529425f2f43d773d0a59517c8d89367d68bb7fd",
+  "dependencies": ["boost-beast", "boost-asio", "boost-system", "openssl", "libpq", "simdjson", "nlohmann-json", {"name":"curl","default-features":false,"features":["openssl"]}]
+}
