@@ -21,7 +21,7 @@
   },
   {
     "path": "include/control/service.hpp",
-    "sha256": "d21341b14b02eca2eb11b3ffba0adc414fe1af3386d651149672d8fcc1d74dc9"
+    "sha256": "e750017361789e7e9bdd6b36899215122be467ac55cae74d9ecd5875886cdc8c"
   },
   {
     "path": "include/control/types.hpp",
@@ -65,7 +65,7 @@
   },
   {
     "path": "src/placement.cpp",
-    "sha256": "425121bfd2bfeb34ec873967f2395b30beac32328e0b70cbce68ffe3428f05ca"
+    "sha256": "e915282de920b65d98157049ae871707d26b16b2f60306c32f61efe7b4795085"
   },
   {
     "path": "src/probe.cpp",
@@ -93,7 +93,7 @@
   },
   {
     "path": "tests/integration.py",
-    "sha256": "15265ab1edbc2ecde18bf86289af57e9f45a9ff21d39c3dc574fc753acf0bf41"
+    "sha256": "d3d31cbd6cd297657e0f91f8886ff60e597b86fcbf0b392be168b1372e8317c4"
   },
   {
     "path": "tests/limited_build.py",

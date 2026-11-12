@@ -423,101 +423,107 @@
     "path": "include/control/service.hpp",
     "line": 33,
     "kind": "function_declarator",
-    "name": "presence(Database &, const std::string &, const Json &, const Actor &)"
-  },
-  {
-    "path": "include/control/service.hpp",
-    "line": 34,
-    "kind": "function_declarator",
-    "name": "social(Database &, const std::string &, const Json &, const Actor &)"
+    "name": "placement_lease(Database &, const std::string &, const Json &, const Actor &,"
   },
   {
     "path": "include/control/service.hpp",
     "line": 35,
     "kind": "function_declarator",
-    "name": "admin(Database &, const std::string &, const Json &)"
+    "name": "presence(Database &, const std::string &, const Json &, const Actor &)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 36,
     "kind": "function_declarator",
-    "name": "actor_kind(const Actor &, std::string_view kind) const"
+    "name": "social(Database &, const std::string &, const Json &, const Actor &)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 37,
     "kind": "function_declarator",
-    "name": "idempotency_lock(Database &, std::string_view actor, std::string_view key) const"
+    "name": "admin(Database &, const std::string &, const Json &)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 38,
     "kind": "function_declarator",
-    "name": "grant(const Actor &) const"
+    "name": "actor_kind(const Actor &, std::string_view kind) const"
   },
   {
     "path": "include/control/service.hpp",
     "line": 39,
     "kind": "function_declarator",
+    "name": "idempotency_lock(Database &, std::string_view actor, std::string_view key) const"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 40,
+    "kind": "function_declarator",
+    "name": "grant(const Actor &) const"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 41,
+    "kind": "function_declarator",
     "name": "browser_api(Database &, const BrowserRequest &, const std::string &path,"
-  },
-  {
-    "path": "include/control/service.hpp",
-    "line": 43,
-    "kind": "function_declarator",
-    "name": "Service(Config config)"
-  },
-  {
-    "path": "include/control/service.hpp",
-    "line": 44,
-    "kind": "function_declarator",
-    "name": "dispatch(Database &, const std::string &path, std::string_view bearer, const Json &body)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 45,
     "kind": "function_declarator",
-    "name": "browser(Database &, const BrowserRequest &)"
+    "name": "Service(Config config)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 46,
     "kind": "function_declarator",
-    "name": "import_browser(Database &, const Json &snapshot)"
+    "name": "dispatch(Database &, const std::string &path, std::string_view bearer, const Json &body)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 47,
     "kind": "function_declarator",
-    "name": "import_social(Database &, const Json &events)"
+    "name": "browser(Database &, const BrowserRequest &)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 48,
     "kind": "function_declarator",
-    "name": "maintain(Database &)"
+    "name": "import_browser(Database &, const Json &snapshot)"
   },
   {
     "path": "include/control/service.hpp",
     "line": 49,
+    "kind": "function_declarator",
+    "name": "import_social(Database &, const Json &events)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 50,
+    "kind": "function_declarator",
+    "name": "maintain(Database &)"
+  },
+  {
+    "path": "include/control/service.hpp",
+    "line": 51,
     "kind": "function_declarator",
     "name": "config() const"
   },
   {
     "path": "include/control/service.hpp",
-    "line": 49,
+    "line": 51,
     "kind": "function_definition",
     "name": "const Config &config() const {"
   },
   {
     "path": "include/control/service.hpp",
-    "line": 52,
+    "line": 54,
     "kind": "function_declarator",
     "name": "signer() const"
   },
   {
     "path": "include/control/service.hpp",
-    "line": 52,
+    "line": 54,
     "kind": "function_definition",
     "name": "const Signer &signer() const {"
   },
@@ -1851,23 +1857,35 @@
     "path": "src/placement.cpp",
     "line": 20,
     "kind": "function_declarator",
-    "name": "Service::placement(Database &db, const std::string &path, const Json &body, const Actor &actor)"
+    "name": "Service::placement_lease(Database &db, const std::string &path, const Json &body, const Actor &actor,"
   },
   {
     "path": "src/placement.cpp",
     "line": 20,
     "kind": "function_definition",
+    "name": "Json Service::placement_lease(Database &db, const std::string &path, const Json &body, const Actor &actor,"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 77,
+    "kind": "function_declarator",
+    "name": "Service::placement(Database &db, const std::string &path, const Json &body, const Actor &actor)"
+  },
+  {
+    "path": "src/placement.cpp",
+    "line": 77,
+    "kind": "function_definition",
     "name": "Json Service::placement(Database &db, const std::string &path, const Json &body, const Actor &actor) {"
   },
   {
     "path": "src/placement.cpp",
-    "line": 226,
+    "line": 269,
     "kind": "lambda_expression",
     "name": "[](const auto &a, const auto &b) { return a.rank < b.rank; }"
   },
   {
     "path": "src/placement.cpp",
-    "line": 307,
+    "line": 350,
     "kind": "lambda_expression",
     "name": "[](const auto &a, const auto &b) {"
   },
@@ -3057,173 +3075,179 @@
     "path": "tests/integration.py",
     "line": 329,
     "kind": "FunctionDef",
+    "name": "test_23_bounded_refresh_does_not_admit_or_resurrect_reservations"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 357,
+    "kind": "FunctionDef",
     "name": "test_21_room_directory_uses_published_policy_and_current_host"
   },
   {
     "path": "tests/integration.py",
-    "line": 380,
+    "line": 408,
     "kind": "FunctionDef",
     "name": "test_22_expired_host_is_not_listed_or_resolvable"
   },
   {
     "path": "tests/integration.py",
-    "line": 397,
+    "line": 425,
     "kind": "FunctionDef",
     "name": "setUpClass"
   },
   {
     "path": "tests/integration.py",
-    "line": 403,
+    "line": 431,
     "kind": "FunctionDef",
     "name": "test_20_public_enrollment_is_optional_scoped_and_revocable"
   },
   {
     "path": "tests/integration.py",
-    "line": 430,
+    "line": 458,
     "kind": "FunctionDef",
     "name": "test_19_feedback_durable_private_idempotent"
   },
   {
     "path": "tests/integration.py",
-    "line": 442,
+    "line": 470,
     "kind": "FunctionDef",
     "name": "friends"
   },
   {
     "path": "tests/integration.py",
-    "line": 449,
+    "line": 477,
     "kind": "FunctionDef",
     "name": "test_01_long_credential_registers_distinct_nodes"
   },
   {
     "path": "tests/integration.py",
-    "line": 454,
+    "line": 482,
     "kind": "FunctionDef",
     "name": "test_02_unauthorized_scopes"
   },
   {
     "path": "tests/integration.py",
-    "line": 459,
+    "line": 487,
     "kind": "FunctionDef",
     "name": "test_03_proof_replay_and_epoch"
   },
   {
     "path": "tests/integration.py",
-    "line": 468,
+    "line": 496,
     "kind": "FunctionDef",
     "name": "test_04_presence_multidevice_sequence"
   },
   {
     "path": "tests/integration.py",
-    "line": 480,
+    "line": 508,
     "kind": "FunctionDef",
     "name": "test_05_presence_privacy_and_unknown"
   },
   {
     "path": "tests/integration.py",
-    "line": 486,
+    "line": 514,
     "kind": "FunctionDef",
     "name": "test_06_invite_cross_region_owner_and_receipts"
   },
   {
     "path": "tests/integration.py",
-    "line": 515,
+    "line": 543,
     "kind": "Lambda",
     "name": "<lambda>"
   },
   {
     "path": "tests/integration.py",
-    "line": 531,
+    "line": 559,
     "kind": "FunctionDef",
     "name": "test_07_reservation_idempotence_and_auth"
   },
   {
     "path": "tests/integration.py",
-    "line": 541,
+    "line": 569,
     "kind": "FunctionDef",
     "name": "test_08_one_slot_hundred_racers"
   },
   {
     "path": "tests/integration.py",
-    "line": 553,
+    "line": 581,
     "kind": "Lambda",
     "name": "<lambda>"
-  },
-  {
-    "path": "tests/integration.py",
-    "line": 560,
-    "kind": "FunctionDef",
-    "name": "test_09_restart_durable_outbox"
-  },
-  {
-    "path": "tests/integration.py",
-    "line": 572,
-    "kind": "FunctionDef",
-    "name": "test_10_credential_revoke_preserves_node_identity"
   },
   {
     "path": "tests/integration.py",
     "line": 588,
     "kind": "FunctionDef",
+    "name": "test_09_restart_durable_outbox"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 600,
+    "kind": "FunctionDef",
+    "name": "test_10_credential_revoke_preserves_node_identity"
+  },
+  {
+    "path": "tests/integration.py",
+    "line": 616,
+    "kind": "FunctionDef",
     "name": "test_11_device_revoke"
   },
   {
     "path": "tests/integration.py",
-    "line": 593,
+    "line": 621,
     "kind": "FunctionDef",
     "name": "test_12_legacy_identity_preserves_account"
   },
   {
     "path": "tests/integration.py",
-    "line": 597,
+    "line": 625,
     "kind": "Lambda",
     "name": "<lambda>"
   },
   {
     "path": "tests/integration.py",
-    "line": 602,
+    "line": 630,
     "kind": "Lambda",
     "name": "<lambda>"
   },
   {
     "path": "tests/integration.py",
-    "line": 622,
+    "line": 650,
     "kind": "FunctionDef",
     "name": "sign"
   },
   {
     "path": "tests/integration.py",
-    "line": 641,
+    "line": 669,
     "kind": "FunctionDef",
     "name": "test_13_invite_revoke_blocks_join"
   },
   {
     "path": "tests/integration.py",
-    "line": 651,
+    "line": 679,
     "kind": "FunctionDef",
     "name": "test_14_websocket_push_and_replay"
   },
   {
     "path": "tests/integration.py",
-    "line": 668,
+    "line": 696,
     "kind": "FunctionDef",
     "name": "test_15_forged_derived_account_rejected"
   },
   {
     "path": "tests/integration.py",
-    "line": 676,
+    "line": 704,
     "kind": "FunctionDef",
     "name": "test_16_draining_affects_only_new_allocations"
   },
   {
     "path": "tests/integration.py",
-    "line": 686,
+    "line": 714,
     "kind": "FunctionDef",
     "name": "test_17_node_budget_and_probe_proof"
   },
   {
     "path": "tests/integration.py",
-    "line": 698,
+    "line": 726,
     "kind": "FunctionDef",
     "name": "test_18_replica_routes_events_during_primary_exit"
   },

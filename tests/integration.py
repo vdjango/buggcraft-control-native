@@ -326,6 +326,34 @@ class Environment:
 
 
 class ControlIntegration(unittest.TestCase):
+    def test_23_bounded_refresh_does_not_admit_or_resurrect_reservations(self):
+        player, *_ = self.env.identity()
+        allocations = [self.env.reserve(player, self.west_grant['id'])[0] for _ in range(3)]
+        active, pending, released = allocations
+        for value in (active, released):
+            self.west.call('placement/confirm', dict(reservation_id=value['reservation_id'], ticket=value['ticket']))
+        self.west.call('placement/release', dict(reservation_id=released['reservation_id']))
+        batch = dict(reservations=[dict(reservation_id=value['reservation_id']) for value in allocations] +
+                     [dict(reservation_id='missing-reservation')])
+        result = self.west.call('placement/refresh', batch)
+        rows = {row['reservation_id']: row for row in result['reservations']}
+        self.assertEqual(rows[active['reservation_id']]['state'], 'active')
+        self.assertEqual(rows[pending['reservation_id']]['error'], 'not_active')
+        self.assertEqual(rows[released['reservation_id']]['error'], 'not_active')
+        self.assertEqual(rows['missing-reservation']['error'], 'not_found')
+        # Owning a different node, or a player identity, never grants access.
+        denied = self.east.call('placement/refresh', dict(reservations=[dict(reservation_id=active['reservation_id'])]))
+        self.assertEqual(denied['reservations'][0]['error'], 'not_found')
+        player.call('placement/refresh', batch, expected=403)
+        # Validate the entire request before mutating any reservation.
+        duplicate = dict(reservations=[dict(reservation_id=active['reservation_id'], release=True)] * 2)
+        self.west.call('placement/refresh', duplicate, expected=400)
+        self.west.call('placement/refresh', dict(reservations=[dict(reservation_id='x'+str(i)) for i in range(257)]), expected=400)
+        result = self.west.call('placement/refresh', dict(reservations=[dict(reservation_id=active['reservation_id'], release=True)]))
+        self.assertEqual(result['reservations'][0]['state'], 'released')
+        result = self.west.call('placement/refresh', dict(reservations=[dict(reservation_id=active['reservation_id'])]))
+        self.assertEqual(result['reservations'][0]['error'], 'not_active')
+
     def test_21_room_directory_uses_published_policy_and_current_host(self):
         host, _, *_ = self.env.identity()
         guest, _, *_ = self.env.identity()

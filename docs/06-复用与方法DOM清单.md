@@ -1,5 +1,7 @@
 # 复用与方法/DOM 清单
 
+2026-11-12 续约：检索 Service::placement 的 confirm/release 和节点 ManagedControl::renew_allocations 后，把原单条规则归入同一 placement_lease，由单条接口与新增有界 refresh 批次共同调用。认证、到期、房间 epoch、活动统计与释放只保留一份；refresh 不能完成首次入场。它在原 State worker 和数据库事务中执行，节点行先锁；非本节点 ID 不获取其他节点锁。临时存储错误使整批回滚，业务拒绝逐项返回。没有新增后台线程或 DOM。
+
 2026-11-11 目录：检索 Placement/list/locate/reserve、rooms/reservations 与节点确认流程后扩展同一 Service::placement，增加 publish/resolve 分支。容量目录缺少公开描述和秘密，因此复用原事务、设备身份、epoch、SHA-256 和 host reservation 补齐，不新增调度器。ControlClient::publish、Rpc::publish_listing 只适配接口并缓存成功描述，复用 describe 轮询；QML/节点不复制策略。清单已更新，实测见 [13](13-大厅房间目录修正.md)。
 
 当前已实现 C++ 服务、验证脚本和 AST 生成器，没有网页或 DOM。实际清单：[methods.json](90-代码清单/methods.json)、[sources.json](90-代码清单/sources.json)、[dom.json](90-代码清单/dom.json)。下表仍是领域职责，不保证每个规划方法已实现；实际类与调用见 08 和源码。

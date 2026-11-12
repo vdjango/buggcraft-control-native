@@ -30,6 +30,8 @@ class Service {
     Json enrollment(Database &, const std::string &, const Json &);
     Json node(Database &, const std::string &, const Json &, const Actor &);
     Json placement(Database &, const std::string &, const Json &, const Actor &);
+    Json placement_lease(Database &, const std::string &, const Json &, const Actor &,
+                         bool active_only = false);
     Json presence(Database &, const std::string &, const Json &, const Actor &);
     Json social(Database &, const std::string &, const Json &, const Actor &);
     Json admin(Database &, const std::string &, const Json &);

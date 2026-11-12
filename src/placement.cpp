@@ -17,58 +17,101 @@ double rank_node(const std::string &key, const std::string &node, double weight)
     return -std::log(uniform) / std::max(1.0, std::min(weight, 1000.0));
 }
 } // namespace
-Json Service::placement(Database &db, const std::string &path, const Json &body, const Actor &actor) {
-    if (path == "/v1/placement/confirm" || path == "/v1/placement/release") {
-        auto id = text(body, "reservation_id", 64);
-        auto row = db.query("SELECT node_id FROM reservations WHERE id=$1", {id});
-        require(row.size() == 1, "not_found", "Unknown reservation", 404);
-        // Capacity mutations lock the node before a reservation everywhere to avoid lock inversion.
-        db.query("SELECT id FROM nodes WHERE id=$1 FOR UPDATE", {row.at(0, 0)});
-        row = db.query(R"SQL(SELECT actor,node_id,state,room_id,room_epoch,expires_at>clock_timestamp(),ticket
+Json Service::placement_lease(Database &db, const std::string &path, const Json &body, const Actor &actor,
+                              bool active_only) {
+    auto id = text(body, "reservation_id", 64);
+    auto row = db.query("SELECT node_id FROM reservations WHERE id=$1", {id});
+    require(row.size() == 1, "not_found", "Unknown reservation", 404);
+    // Capacity mutations lock the node before a reservation everywhere to avoid lock inversion.
+    db.query("SELECT id FROM nodes WHERE id=$1 FOR UPDATE", {row.at(0, 0)});
+    row = db.query(R"SQL(SELECT actor,node_id,state,room_id,room_epoch,expires_at>clock_timestamp(),ticket
              FROM reservations WHERE id=$1 FOR UPDATE)SQL",
-                       {id});
-        bool node_owner = actor.kind == "node" && actor.id == row.at(0, 1);
-        if (path.ends_with("/confirm")) {
-            require(node_owner, "forbidden", "Only the assigned node can confirm admission", 403);
+                   {id});
+    require(row.size() == 1, "not_found", "Unknown reservation", 404);
+    bool node_owner = actor.kind == "node" && actor.id == row.at(0, 1);
+    if (path.ends_with("/confirm")) {
+        require(node_owner, "forbidden", "Only the assigned node can confirm admission", 403);
+        if (active_only)
+            require(row.at(0, 2) == "active", "not_active", "Admission must be confirmed first", 409);
+        else
             require(secure_equal(text(body, "ticket", 8192), row.at(0, 6)), "forbidden",
                     "Wrong allocation ticket", 403);
-            if (body.value("admission", false)) {
-                auto ticket = row.at(0, 6);
-                auto claims = parse_json(unhex(ticket.substr(0, ticket.find('.'))));
-                auto device = db.query("SELECT 1 FROM devices WHERE account_id=$1 AND id=$2 AND NOT revoked "
-                                       "AND (valid_until IS NULL OR valid_until>clock_timestamp())",
-                                       {row.at(0, 0), text(claims, "device", 64)});
-                require(device.size(), "revoked", "Player device authorization revoked", 401);
-            }
-            require(row.at(0, 2) != "released" && row.at(0, 5) == "t", "expired", "Reservation expired", 409);
-            auto room = db.query("SELECT epoch,state FROM rooms WHERE id=$1", {row.at(0, 3)});
-            require(room.size() && room.number(0) == row.number(0, 4) && room.at(0, 1) == "open", "stale",
-                    "Room epoch changed", 409);
-            db.query("UPDATE reservations SET state='active',expires_at=clock_timestamp()+interval '120 "
-                     "seconds' WHERE id=$1",
-                     {id});
-            record_activity(db, row.at(0, 0), "multiplayer", 120);
-            record_companions(db, row.at(0, 0), row.at(0, 3), row.at(0, 4));
-            return {{"reservation_id", id}, {"state", "active"}, {"renew_in", 30}, {"lease_seconds", 120}};
+        if (body.value("admission", false)) {
+            auto ticket = row.at(0, 6);
+            auto claims = parse_json(unhex(ticket.substr(0, ticket.find('.'))));
+            auto device = db.query("SELECT 1 FROM devices WHERE account_id=$1 AND id=$2 AND NOT revoked "
+                                   "AND (valid_until IS NULL OR valid_until>clock_timestamp())",
+                                   {row.at(0, 0), text(claims, "device", 64)});
+            require(device.size(), "revoked", "Player device authorization revoked", 401);
         }
-        require(node_owner || (actor.kind == "player" && actor.id == row.at(0, 0)), "forbidden",
-                "Not your reservation", 403);
-        db.query("UPDATE reservations SET state='released' WHERE id=$1", {id});
-        if (row.at(0, 2) == "active") {
-            auto remaining = db.query("SELECT 1 FROM reservations WHERE actor=$1 AND state='active' AND "
-                                      "expires_at>clock_timestamp() LIMIT 1",
-                                      {row.at(0, 0)});
-            record_activity(db, row.at(0, 0), "multiplayer", remaining.size() ? 120 : 0);
-            db.query(R"SQL(UPDATE companion_activity c SET lease_until=0 WHERE (low_id=$1 OR high_id=$1)
+        require(row.at(0, 2) != "released" && row.at(0, 5) == "t", "expired", "Reservation expired", 409);
+        auto room = db.query("SELECT epoch,state FROM rooms WHERE id=$1", {row.at(0, 3)});
+        require(room.size() && room.number(0) == row.number(0, 4) && room.at(0, 1) == "open", "stale",
+                "Room epoch changed", 409);
+        db.query("UPDATE reservations SET state='active',expires_at=clock_timestamp()+interval '120 "
+                 "seconds' WHERE id=$1",
+                 {id});
+        record_activity(db, row.at(0, 0), "multiplayer", 120);
+        record_companions(db, row.at(0, 0), row.at(0, 3), row.at(0, 4));
+        return {{"reservation_id", id}, {"state", "active"}, {"renew_in", 30}, {"lease_seconds", 120}};
+    }
+    require(node_owner || (actor.kind == "player" && actor.id == row.at(0, 0)), "forbidden",
+            "Not your reservation", 403);
+    db.query("UPDATE reservations SET state='released' WHERE id=$1", {id});
+    if (row.at(0, 2) == "active") {
+        auto remaining = db.query("SELECT 1 FROM reservations WHERE actor=$1 AND state='active' AND "
+                                  "expires_at>clock_timestamp() LIMIT 1",
+                                  {row.at(0, 0)});
+        record_activity(db, row.at(0, 0), "multiplayer", remaining.size() ? 120 : 0);
+        db.query(R"SQL(UPDATE companion_activity c SET lease_until=0 WHERE (low_id=$1 OR high_id=$1)
             AND room_id=$2 AND room_epoch=$3::bigint AND NOT EXISTS(
               SELECT 1 FROM reservations a WHERE a.actor=$1 AND a.room_id=$2 AND a.room_epoch=$3::bigint
               AND a.state='active' AND a.expires_at>clock_timestamp()))SQL",
-                     {row.at(0, 0), row.at(0, 3), row.at(0, 4)});
+                 {row.at(0, 0), row.at(0, 3), row.at(0, 4)});
+    }
+    // Releasing the host closes exactly this room generation, never a newer recovery.
+    db.query("UPDATE rooms SET state='closed' WHERE reservation_id=$1 AND epoch=$2::bigint",
+             {id, row.at(0, 4)});
+    return {{"reservation_id", id}, {"state", "released"}};
+}
+Json Service::placement(Database &db, const std::string &path, const Json &body, const Actor &actor) {
+    if (path == "/v1/placement/confirm" || path == "/v1/placement/release")
+        return placement_lease(db, path, body, actor);
+    if (path == "/v1/placement/refresh") {
+        actor_kind(actor, "node");
+        const auto &items = body.at("reservations");
+        require(items.is_array() && !items.empty() && items.size() <= 256, "invalid",
+                "Expected 1-256 active reservations");
+        std::map<std::string, bool> actions;
+        for (const auto &item : items) {
+            auto id = text(item, "reservation_id", 64);
+            require(!item.contains("release") || item["release"].is_boolean(), "invalid",
+                    "Invalid release action");
+            require(actions.emplace(id, item.value("release", false)).second, "invalid",
+                    "Duplicate reservation");
         }
-        // Releasing the host closes exactly this room generation, never a newer recovery.
-        db.query("UPDATE rooms SET state='closed' WHERE reservation_id=$1 AND epoch=$2::bigint",
-                 {id, row.at(0, 4)});
-        return {{"reservation_id", id}, {"state", "released"}};
+        Json results = Json::array();
+        for (const auto &[id, release] : actions) {
+            // Never acquire another node's lock, and never admit an unconfirmed ticket via refresh.
+            auto own = db.query("SELECT 1 FROM reservations WHERE id=$1 AND node_id=$2", {id, actor.id});
+            if (!own.size()) {
+                results.push_back({{"reservation_id", id}, {"error", "not_found"}});
+                continue;
+            }
+            db.query("SAVEPOINT refresh_item");
+            try {
+                results.push_back(placement_lease(db,
+                                                  release ? "/v1/placement/release" : "/v1/placement/confirm",
+                                                  {{"reservation_id", id}}, actor, true));
+            } catch (const Error &error) {
+                if (error.status >= 500)
+                    throw;
+                db.query("ROLLBACK TO SAVEPOINT refresh_item");
+                results.push_back({{"reservation_id", id}, {"error", error.code}});
+            }
+            db.query("RELEASE SAVEPOINT refresh_item");
+        }
+        return {{"reservations", results}, {"lease_seconds", 120}};
     }
     actor_kind(actor, "player");
     if (path == "/v1/room/publish") {
